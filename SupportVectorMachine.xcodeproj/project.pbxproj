@@ -6,10 +6,19 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXFileReference section */
+		137AEADE196C2C8A00210ECD /* main.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = main.py; sourceTree = "<group>"; };
+		137AEAE0196C41E500210ECD /* BBCWorld.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = BBCWorld.csv; sourceTree = "<group>"; };
+		137AEAE1196D9FCA00210ECD /* Final.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Final.csv; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
 /* Begin PBXGroup section */
 		137AEAD3196C2C4F00210ECD = {
 			isa = PBXGroup;
 			children = (
+				137AEAE0196C41E500210ECD /* BBCWorld.csv */,
+				137AEADE196C2C8A00210ECD /* main.py */,
+				137AEAE1196D9FCA00210ECD /* Final.csv */,
 			);
 			sourceTree = "<group>";
 		};
@@ -165,6 +174,7 @@
 				137AEADD196C2C4F00210ECD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
