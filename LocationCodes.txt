@@ -1,0 +1,10 @@
+None : 0
+London, UK : 1
+New York, USA : 2
+Global : 3
+New Delhi : 4
+San Francisco, USA : 5
+Sydney, Australia : 6
+Singapore : 7
+Seattle : 8
+Palo Alto : 9
