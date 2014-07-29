@@ -12,7 +12,7 @@ from patsy import dmatrices
 from utility import plot_decision_boundary
 from sklearn.utils import shuffle
 
-DataSetLocation = r'/Users/Kaushy/Courses/Project/SupportVectorMachine/FinalFirst.csv'
+DataSetLocation = r'/Users/Kaushy/Courses/Project/SupportVectorMachine/Final.csv'
 DataSetLocationUserData = r'/Users/Kaushy/Courses/Project/SupportVectorMachine/UserAccountInfoFinal.csv'
 numpy.set_printoptions(threshold=sys.maxsize)
 
@@ -73,6 +73,7 @@ twitterUserDataFrame['UserAccountCreatedAt'] = twitterUserDataFrame['UserAccount
 twitterUserDataFrame['ProfileBackgroundImageURL'] = twitterUserDataFrame['ProfileBackgroundImageURL'].map(lambda x: True if pandas.notnull(x) else False)
 twitterUserDataFrame['ProfileImageURL'] = twitterUserDataFrame['ProfileImageURL'].map(lambda x: True if pandas.notnull(x) else False)
 twitterUserDataFrame['ProfileBannerURL'] = twitterUserDataFrame['ProfileBannerURL'].map(lambda x: True if pandas.notnull(x) else False)
+twitterUserDataFrame['UserAccountCreatedAt'] = twitterUserDataFrame['UserAccountCreatedAt'].convert_objects(convert_dates='coerce')
 
 # Merging the two dataframes - user and the tweets
 finalDataFrame = pandas.merge(twitterDataFrame.reset_index(),twitterUserDataFrame.reset_index(),on=['UserID'],how='inner')
@@ -82,7 +83,7 @@ print finalDataFrame.info()
 
 
 # model formula, ~ means = and C() lets the classifier know its categorical data.
-formula = 'Classifier ~ InReplyToStatusID + InReplyToUserID + RetweetCount + FavouriteCount + Hashtags + UserMentionID + URL + MediaURL + C(MediaType) + UserMentionID + C(PossiblySensitive) + C(Language) + TweetLength + Location + Description + UserAccountURL + Protected + FollowersCount + FriendsCount + ListedCount + UserAccountCreatedAt + FavouritesCount + GeoEnabled + StatusesCount + ProfileBackgroundImageURL + ProfileUseBackgroundImage + DefaultProfile + FrequencyOfTweets'
+formula = 'Classifier ~ InReplyToStatusID + InReplyToUserID + RetweetCount + FavouriteCount + Hashtags + UserMentionID + URL + MediaURL + C(MediaType) + UserMentionID + C(PossiblySensitive) + C(Language) + TweetLength + Location + Description + UserAccountURL + Protected + FollowersCount + FriendsCount + ListedCount + FavouritesCount + GeoEnabled + StatusesCount + ProfileBackgroundImageURL + ProfileUseBackgroundImage + DefaultProfile + FrequencyOfTweets'
 
 ### create a regression friendly data frame y gives the classifiers, x gives the features and gives different columns for Categorical data depending on variables. 
 y, x = dmatrices(formula, data=finalDataFrame, return_type='matrix')
@@ -90,7 +91,7 @@ y, x = dmatrices(formula, data=finalDataFrame, return_type='matrix')
 ## select which features we would like to analyze
 X = numpy.asarray(x)
 
-X = X[:,[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95]]
+X = X[:,[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54]]
 
 # needs to be 1 dimenstional so we flatten. it comes out of dmatirces with a shape.
 y = y.ravel()
