@@ -19,12 +19,18 @@
 		137AEAE91976A48000210ECD /* utility.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = utility.py; sourceTree = "<group>"; };
 		13BB5C3F1981641B004A52CC /* FinalSecond.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FinalSecond.csv; sourceTree = "<group>"; };
 		13BB5C40198197AD004A52CC /* UserAccountDuplicateForVisualisation.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = UserAccountDuplicateForVisualisation.xlsx; sourceTree = "<group>"; };
+		13BC617E19879A0400CBFE78 /* SVM.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = SVM.py; sourceTree = "<group>"; };
+		13BC617F1987B95800CBFE78 /* DataManipulation.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = DataManipulation.py; sourceTree = "<group>"; };
+		13ECC210198BE54F00849C70 /* RandomForests.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = RandomForests.py; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
 		137AEAD3196C2C4F00210ECD = {
 			isa = PBXGroup;
 			children = (
+				13ECC210198BE54F00849C70 /* RandomForests.py */,
+				13BC617F1987B95800CBFE78 /* DataManipulation.py */,
+				13BC617E19879A0400CBFE78 /* SVM.py */,
 				137AEAE91976A48000210ECD /* utility.py */,
 				137AEAE519744A5C00210ECD /* LocationCodes.txt */,
 				137AEAE3196F2C0A00210ECD /* CodeHacks.py */,
